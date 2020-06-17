@@ -16,6 +16,9 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
+    "@types/webpack": "^4.41.17",
+    "acorn": "^6.4.1",
+    "bufferutil": "^4.0.1",
     "gatsby": "^2.23.3",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-mdx": "^1.2.15",
@@ -24,7 +27,12 @@
     "gatsby-source-filesystem": "^2.3.11",
     "gatsby-transformer-sharp": "^2.5.5",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-refresh": "^0.8.3",
+    "sockjs-client": "^1.4.0",
+    "type-fest": "^0.13.1",
+    "utf-8-validate": "^5.0.2",
+    "webpack-plugin-serve": "^0.12.1"
   },
   "devDependencies": {
     "prettier": "2.0.5"

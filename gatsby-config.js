@@ -11,21 +11,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${_dirname}/src/pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `post`,
-        path: `${_dirname}/src/post`,
+        path: `${__dirname}/src/post`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${_dirname}/src/images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-plugin-sharp`,
@@ -33,16 +33,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extension: [`.md`, `.mdx`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-            },
-          },
-        ],
+        extensions: [`.mdx`, `.md`],
       },
+      gatsbyRemarkPlugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 1200,
+          },
+        },
+      ],
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
