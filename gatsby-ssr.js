@@ -1,6 +1,8 @@
 import React from "react"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
+import { MDXProvider } from "@mdx-js/react"
 import Theme from "./src/themes/theme"
+import { Table } from "./src/components/Table"
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -15,10 +17,16 @@ body, html {
   background-color: ${props => props.theme.colors.light1};
 }
 `
+// This resolves table scrolling issue with smaller windows
+const components = {
+  table: Table,
+}
 
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={Theme}>
-    <GlobalStyle />
-    {element}
-  </ThemeProvider>
+  <MDXProvider components={components}>
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      {element}
+    </ThemeProvider>
+  </MDXProvider>
 )
