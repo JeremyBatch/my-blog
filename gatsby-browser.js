@@ -17,7 +17,7 @@ body, html {
   background-color: ${props => props.theme.colors.light1};
 }
 `
-
+// This resolves table scrolling issue with smaller windows
 const components = {
   table: Table,
 }
